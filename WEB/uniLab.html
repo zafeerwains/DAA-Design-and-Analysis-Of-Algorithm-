@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Name Swap</h1>
+        <p id="name1">Ali</p>
+        <p id="name2">Ahmad</p>
+        <button onclick="swapName()"> Swap Name</button>
+        <Script>
+            const swapName = () => {
+                let name1 = document.getElementById("name1").innerHTML
+                let name2 = document.getElementById("name2").innerHTML
+                document.getElementById("name2").innerHTML = name1
+                document.getElementById("name1").innerHTML = name2
+            }
+        </Script>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button style="background-color: #3AAD96;border:none; " id="printButton">Print Table</button>
+    <p id="table" style="margin: 20px 0;padding:0 20px;color:#3AAD96;"></p>
+    <script>
+        document.getElementById("printButton").addEventListener("click", () => {
+            let val = +prompt("Enter the number for the multiplication table")
+            let end = +prompt("Enter the end value of multiples")
+            if (!val || isNaN(val) || !end || isNaN(end)) alert("Please enter valid numeric values.")
+            document.getElementById("table").innerHTML = ""
+            for (let i = 1; i <= end; i++)document.getElementById("table").innerHTML += `${val} * ${i} = ${val * i}<br>`
+        });
+    </script>
+</body>
+
+</html>
